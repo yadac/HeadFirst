@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HeadFirst
+namespace HeadFirst.Model
 {
     public abstract class Duck
     {

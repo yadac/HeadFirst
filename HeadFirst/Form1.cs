@@ -1,4 +1,4 @@
-using HeadFirst.model;
+using HeadFirst.Model;
 
 namespace HeadFirst
 {
@@ -12,16 +12,16 @@ namespace HeadFirst
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //Duck duck = new MallardDuck();
-            //duck.PerformFly();
-            //duck.PerformQuack();
-            //duck.Quackable = new MuteQuack();
-            //duck.PerformQuack();
+            //Character character = new King();
+            //character.Fight();
+            //character.WeaponBehavior = new BowAndArrowBehavior();
+            //character.Fight();
 
-            Character character = new King();
-            character.Fight();
-            character.WeaponBehavior = new BowAndArrowBehavior();
-            character.Fight();
+            NormalDisplayDevice device = new NormalDisplayDevice();
+            WeatherData weather = new WeatherData();
+            weather.Regist(device);
+            weather.SetMeasurements();
+            this.label1.Text = device.Display();
         }
     }
 }
