@@ -5,9 +5,8 @@ namespace HeadFirst.Model
     public class ForecastDisplay : IObserver, IDisplay
     {
         private WeatherData _weatherData;
-        private float _tempreture;
-        private float _humidity;
-        private float _pressure;
+        private double _tempreture;
+        private double _humidity;
 
         public ForecastDisplay(WeatherData weatherData)
         {

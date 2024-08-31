@@ -10,18 +10,15 @@ namespace HeadFirst.Model
     public class WeatherData : ISubject
     {
         private readonly List<IObserver> _observers = new List<IObserver>();
-        private float _tempreture;
-        private float _humidity;
-        private float _pressure;
-        public float Tempreture { get; private set; }
-        public float Humidity { get; private set; }
-        public float Pressure { get; private set; }
+        private double _tempreture;
+        private double _humidity;
+        public double Tempreture { get; private set; }
+        public double Humidity { get; private set; }
 
-        public void SetMeasurements()
+        public async void SetMeasurements()
         {
-            Tempreture = WeatherElementGenerator.GetTempreture();
-            Humidity = WeatherElementGenerator.GetTempreture();
-            Pressure = WeatherElementGenerator.GetTempreture();
+            Tempreture = await WeatherElementGenerator.GetTempretureAsync();
+            Humidity = await WeatherElementGenerator.GetHumidityAsync();
             MeasurementsChanged();
         }
 
