@@ -2,6 +2,6 @@
 {
     public interface IDisplay
     {
-        string Display();
+        void Display();
     }
 }

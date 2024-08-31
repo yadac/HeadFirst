@@ -10,11 +10,15 @@ namespace HeadFirst.Model
     public class WeatherData : ISubject
     {
         private readonly List<IObserver> _observers = new List<IObserver>();
-        private WeatherElement _tempreture = new Tempreture();
+        private float _tempreture;
+        private float _humidity;
+        private float _pressure;
 
         public void SetMeasurements()
         {
-            _tempreture.Element = WeatherElementGenerator.GetTempreture();
+            _tempreture = WeatherElementGenerator.GetTempreture();
+            _humidity = WeatherElementGenerator.GetTempreture();
+            _pressure = WeatherElementGenerator.GetTempreture();
             MeasurementsChanged();
         }
 
@@ -27,7 +31,7 @@ namespace HeadFirst.Model
         {
             foreach (var o in _observers)
             {
-                o.Update(_tempreture);
+                o.Update(_tempreture, _humidity, _pressure);
             }
         }
 

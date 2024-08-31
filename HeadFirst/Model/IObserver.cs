@@ -2,6 +2,6 @@
 {
     public interface IObserver
     {
-        void Update(WeatherElement weatherElement);
+        void Update(float templature, float humidity, float pressure);
     }
 }
