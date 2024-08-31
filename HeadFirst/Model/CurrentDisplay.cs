@@ -21,11 +21,10 @@ namespace HeadFirst.Model
             Debug.WriteLine($"湿度: {_humidity}");
         }
 
-        public void Update(float templature, float humidity, float pressure)
+        public void Update()
         {
-            _tempreture = templature;
-            _humidity = humidity;
-            _pressure = pressure;
+            _tempreture = _weatherData.Tempreture;
+            _humidity = _weatherData.Humidity;
             Display();
         }
     }

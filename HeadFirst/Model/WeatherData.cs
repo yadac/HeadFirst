@@ -13,12 +13,15 @@ namespace HeadFirst.Model
         private float _tempreture;
         private float _humidity;
         private float _pressure;
+        public float Tempreture { get; private set; }
+        public float Humidity { get; private set; }
+        public float Pressure { get; private set; }
 
         public void SetMeasurements()
         {
-            _tempreture = WeatherElementGenerator.GetTempreture();
-            _humidity = WeatherElementGenerator.GetTempreture();
-            _pressure = WeatherElementGenerator.GetTempreture();
+            Tempreture = WeatherElementGenerator.GetTempreture();
+            Humidity = WeatherElementGenerator.GetTempreture();
+            Pressure = WeatherElementGenerator.GetTempreture();
             MeasurementsChanged();
         }
 
@@ -31,7 +34,7 @@ namespace HeadFirst.Model
         {
             foreach (var o in _observers)
             {
-                o.Update(_tempreture, _humidity, _pressure);
+                o.Update();
             }
         }
 

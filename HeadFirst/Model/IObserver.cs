@@ -2,6 +2,6 @@
 {
     public interface IObserver
     {
-        void Update(float templature, float humidity, float pressure);
+        void Update();
     }
 }
