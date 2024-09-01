@@ -22,7 +22,7 @@ namespace HeadFirst
         private void button2_Click(object sender, EventArgs e)
         {
             // HouseBlendの作成
-            HouseBlend houseBlend = new HouseBlend();
+            HouseBlend houseBlend = new HouseBlend(BeverageSize.VENTI);
             // Mochaのトッピング
             Mocha mocha = new Mocha(houseBlend);
             // Mochaのトッピング
