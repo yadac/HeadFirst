@@ -1,6 +1,6 @@
 ﻿using System.Diagnostics;
 
-namespace HeadFirst.Model
+namespace HeadFirst.Model.Observer
 {
     public class CurrentDisplay : IObserver, IDisplay
     {

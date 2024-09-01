@@ -1,7 +1,7 @@
-﻿using HeadFirst.Model;
+﻿using HeadFirst.Model.Observer;
 using Newtonsoft.Json;
 
-namespace HeadFirst.Service
+namespace HeadFirst.Service.Observer
 {
     public static class WeatherElementGenerator
     {

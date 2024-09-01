@@ -1,4 +1,4 @@
-﻿namespace HeadFirst.Model
+﻿namespace HeadFirst.Model.Observer
 {
     public interface IObserver
     {

@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HeadFirst.Model
+namespace HeadFirst.Model.Observer
 {
     public class Weather
     {

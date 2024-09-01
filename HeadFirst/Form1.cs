@@ -1,4 +1,5 @@
-using HeadFirst.Model;
+﻿using HeadFirst.Model.Decorator;
+using HeadFirst.Model.Observer;
 
 namespace HeadFirst
 {
@@ -16,6 +17,22 @@ namespace HeadFirst
             CurrentDisplay current = new CurrentDisplay(weatherData);
             ForecastDisplay forecast = new ForecastDisplay(weatherData);
             weatherData.SetMeasurements();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            // HouseBlendの作成
+            HouseBlend houseBlend = new HouseBlend();
+            // Mochaのトッピング
+            Mocha mocha = new Mocha(houseBlend);
+            // Mochaのトッピング
+            Mocha mocha2 = new Mocha(mocha);
+            // Milkのトッピング
+            Milk milk = new Milk(mocha2);
+            // お会計(1 + 0.2 * 2 + 0.3 = $1.7)
+            var cost = milk.Cost();
+            label1.Text = $"Cost: ${cost.ToString()}";
+            label2.Text = $"Order: {milk.GetDescription()}";
         }
     }
 }
